@@ -8,15 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Binding var document: MarkDownDocument
+    @Binding var document: MarkdownDocument
 
     var body: some View {
-        TextEditor(text: $document.text)
+        TabView {
+            MarkdownView(viewModel: ViewModel(document: $document))
+                .tabItem {
+                    Label("View", systemImage: "eye")
+                }
+            TextEditor(text: $document.text)
+                .tabItem {
+                    Label("Edit", systemImage: "pencil")
+                }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    @State static var document = MarkdownDocument()
     static var previews: some View {
-        ContentView(document: .constant(MarkDownDocument()))
+        ContentView(document: $document)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  MarkDownDocument.swift
+//  MarkdownDocument.swift
 //  Shared
 //
 //  Created by Philipp on 05.09.20.
@@ -9,19 +9,21 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 extension UTType {
-    static var exampleText: UTType {
-        UTType(importedAs: "com.example.plain-text")
+    static var markdown: UTType {
+        UTType(importedAs: "net.daringfireball.markdown")
     }
 }
 
-struct MarkDownDocument: FileDocument {
+struct MarkdownDocument: FileDocument {
     var text: String
+    let name: String
 
-    init(text: String = "Hello, world!") {
+    init(text: String = "# Hello, world!", name: String = "Unnamed") {
         self.text = text
+        self.name = name
     }
 
-    static var readableContentTypes: [UTType] { [.exampleText] }
+    static var readableContentTypes: [UTType] { [.markdown] }
 
     init(configuration: ReadConfiguration) throws {
         guard let data = configuration.file.regularFileContents,
@@ -30,6 +32,7 @@ struct MarkDownDocument: FileDocument {
             throw CocoaError(.fileReadCorruptFile)
         }
         text = string
+        name = "Unnamed"
     }
     
     func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
