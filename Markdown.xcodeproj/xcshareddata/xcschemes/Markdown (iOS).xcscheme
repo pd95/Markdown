@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "173D79C52503912400A15BFC"
+               BlueprintIdentifier = "173D79BD2503912300A15BFC"
                BuildableName = "Markdown.app"
-               BlueprintName = "Markdown (macOS)"
+               BlueprintName = "Markdown (iOS)"
                ReferencedContainer = "container:Markdown.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "173D79C52503912400A15BFC"
+            BlueprintIdentifier = "173D79BD2503912300A15BFC"
             BuildableName = "Markdown.app"
-            BlueprintName = "Markdown (macOS)"
+            BlueprintName = "Markdown (iOS)"
             ReferencedContainer = "container:Markdown.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "173D79C52503912400A15BFC"
+            BlueprintIdentifier = "173D79BD2503912300A15BFC"
             BuildableName = "Markdown.app"
-            BlueprintName = "Markdown (macOS)"
+            BlueprintName = "Markdown (iOS)"
             ReferencedContainer = "container:Markdown.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
