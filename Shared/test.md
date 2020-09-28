@@ -25,13 +25,13 @@ HTML entities: &ge; &copy;
 
 ### Quotes
 
-   > [l](/u "t")
+   > [link](/u "t")
    >
-   > - [f]
-   > - ![a](/u "t")
+   > - [footnote]
+   > - ![image link](/u "t")
    >
-   >> <ftp://hh>
-   >> <u@hh>
+   >> FTP: <ftp://hh>  
+   >> Mail: <u@hh>
 
 ### Code blocks
 
@@ -73,15 +73,16 @@ google.com http://google.com google@google.com
 
 ### Embedded HTML custom tags
 
-and <xmp> but
+Disallowed `xmp` tag should be filtered <xmp> but custom `surewhynot` should be rendered
 
 <surewhynot>
 sure
 </surewhynot>
 
+see [GitHub Flavored Markdown Spec](https://github.github.com/gfm/#disallowed-raw-html-extension-)
 
 ### Footnote definition
 
 Nothing should follow this line.
 
-[f]: /u "t"
+[footnote]: /u "t"

@@ -6,13 +6,7 @@
 //
 
 import SwiftUI
-import Hoedown
-
-
-extension HoedownExtensions {
-    // Shortcut to enable all extensions
-    public static let AllExtensions = HoedownExtensions([Tables, FencedCodeBlocks, FootNotes, AutoLinkURLs, StrikeThrough, Underline, Highlight, Quote, Superscript, Math, NoIntraEmphasis, SpaceHeaders, MathExplicit])
-}
+import cmark_gfm
 
 let testMarkDown: String = {
     guard let resourceUrl = Bundle.main.url(forResource: "test", withExtension: "md"),
@@ -45,6 +39,52 @@ let templateHTML: String = {
     return string.replacingOccurrences(of: "___CSS___", with: stylesCSS)
 }()
 
+func renderMarkdown(_ string: String) -> String? {
+    let options = CMARK_OPT_UNSAFE
+
+    cmark_gfm_core_extensions_ensure_registered()
+
+    guard let parser = cmark_parser_new(options) else {
+        return nil
+    }
+    defer {
+        cmark_parser_free(parser)
+    }
+
+    // Attach parser extensions
+    for extensionName in ["table","autolink","strikethrough","tasklist"] {
+        let foundExtension = cmark_find_syntax_extension(extensionName)
+        if cmark_parser_attach_syntax_extension(parser, foundExtension) != 0 {
+            print("Attached extension \(extensionName)")
+        }
+        else {
+            print("Unable to attach extension \(extensionName)")
+        }
+    }
+
+    cmark_parser_feed(parser, string, string.utf8.count)
+
+    guard let doc = cmark_parser_finish(parser) else {
+        return nil
+    }
+    defer {
+        cmark_node_free(doc);
+    }
+
+    // Enable HTML specific extension to render output
+    var htmlExtensions: UnsafeMutablePointer<cmark_llist>?
+    if let tagfilter = cmark_find_syntax_extension("tagfilter") {
+        htmlExtensions = cmark_llist_append(cmark_get_default_mem_allocator(), nil, tagfilter)
+    }
+    guard let html = cmark_render_html(doc, options, htmlExtensions) else {
+        return nil
+    }
+    defer {
+        free(html)
+    }
+
+    return String(cString: html)
+}
 
 class ViewModel: ObservableObject {
     @Binding var document: MarkdownDocument
@@ -62,7 +102,7 @@ class ViewModel: ObservableObject {
         let text = document.text
         DispatchQueue.global().async { [weak self] in
             guard let self = self else { return }
-            if let html = Hoedown.renderHTMLForMarkdown(text, flags: [.Escape, .HardWrap, .UseXHTML], extensions: .AllExtensions) {
+            if let html = renderMarkdown(text) {
                 print(html)
                 let finalHTML = templateHTML.replacingOccurrences(of: "___MARKDOWN___", with: html)
                 DispatchQueue.main.async {

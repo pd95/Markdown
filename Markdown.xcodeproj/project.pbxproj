@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1717F0A5251D3FDD00F3DD8D /* cmark-gfm in Frameworks */ = {isa = PBXBuildFile; productRef = 1717F0A4251D3FDD00F3DD8D /* cmark-gfm */; };
+		1717F0A7251D3FE300F3DD8D /* cmark-gfm in Frameworks */ = {isa = PBXBuildFile; productRef = 1717F0A6251D3FE300F3DD8D /* cmark-gfm */; };
 		173D79CA2503912400A15BFC /* MarkdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D79B62503912100A15BFC /* MarkdownApp.swift */; };
 		173D79CB2503912400A15BFC /* MarkdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D79B62503912100A15BFC /* MarkdownApp.swift */; };
 		173D79CC2503912400A15BFC /* MarkdownDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D79B72503912100A15BFC /* MarkdownDocument.swift */; };
@@ -25,8 +27,6 @@
 		1798D4F825053B4A0070FD60 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798D4F625053B4A0070FD60 /* MarkdownView.swift */; };
 		1798D4FA25053BAD0070FD60 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798D4F925053BAD0070FD60 /* WebView.swift */; };
 		1798D4FB25053BAD0070FD60 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798D4F925053BAD0070FD60 /* WebView.swift */; };
-		1798D50625054A1E0070FD60 /* SwiftHoedown in Frameworks */ = {isa = PBXBuildFile; productRef = 1798D50525054A1E0070FD60 /* SwiftHoedown */; };
-		1798D50925054CFA0070FD60 /* SwiftHoedown in Frameworks */ = {isa = PBXBuildFile; productRef = 1798D50825054CFA0070FD60 /* SwiftHoedown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1717F0A1251D3FAD00F3DD8D /* swift-cmark-gfm */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "swift-cmark-gfm"; path = "../swift-cmark-gfm"; sourceTree = "<group>"; };
 		173D79B62503912100A15BFC /* MarkdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownApp.swift; sourceTree = "<group>"; };
 		173D79B72503912100A15BFC /* MarkdownDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownDocument.swift; sourceTree = "<group>"; };
 		173D79B82503912100A15BFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1798D50625054A1E0070FD60 /* SwiftHoedown in Frameworks */,
+				1717F0A5251D3FDD00F3DD8D /* cmark-gfm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1798D50925054CFA0070FD60 /* SwiftHoedown in Frameworks */,
+				1717F0A7251D3FE300F3DD8D /* cmark-gfm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +136,7 @@
 		1798D50725054CFA0070FD60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1717F0A1251D3FAD00F3DD8D /* swift-cmark-gfm */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,7 +159,7 @@
 			);
 			name = "Markdown (iOS)";
 			packageProductDependencies = (
-				1798D50525054A1E0070FD60 /* SwiftHoedown */,
+				1717F0A4251D3FDD00F3DD8D /* cmark-gfm */,
 			);
 			productName = "MarkDown (iOS)";
 			productReference = 173D79BE2503912400A15BFC /* Markdown.app */;
@@ -177,7 +179,7 @@
 			);
 			name = "Markdown (macOS)";
 			packageProductDependencies = (
-				1798D50825054CFA0070FD60 /* SwiftHoedown */,
+				1717F0A6251D3FE300F3DD8D /* cmark-gfm */,
 			);
 			productName = "MarkDown (macOS)";
 			productReference = 173D79C62503912400A15BFC /* Markdown.app */;
@@ -211,7 +213,6 @@
 			);
 			mainGroup = 173D79B02503912000A15BFC;
 			packageReferences = (
-				1798D50425054A1E0070FD60 /* XCRemoteSwiftPackageReference "SwiftHoedown" */,
 			);
 			productRefGroup = 173D79BF2503912400A15BFC /* Products */;
 			projectDirPath = "";
@@ -518,27 +519,14 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		1798D50425054A1E0070FD60 /* XCRemoteSwiftPackageReference "SwiftHoedown" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "file:///Users/philipp/Desktop/AppZeug/SwiftHoedown";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.6;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		1798D50525054A1E0070FD60 /* SwiftHoedown */ = {
+		1717F0A4251D3FDD00F3DD8D /* cmark-gfm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1798D50425054A1E0070FD60 /* XCRemoteSwiftPackageReference "SwiftHoedown" */;
-			productName = SwiftHoedown;
+			productName = "cmark-gfm";
 		};
-		1798D50825054CFA0070FD60 /* SwiftHoedown */ = {
+		1717F0A6251D3FE300F3DD8D /* cmark-gfm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1798D50425054A1E0070FD60 /* XCRemoteSwiftPackageReference "SwiftHoedown" */;
-			productName = SwiftHoedown;
+			productName = "cmark-gfm";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
