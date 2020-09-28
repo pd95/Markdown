@@ -17,6 +17,30 @@
 		173D79CF2503912400A15BFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D79B82503912100A15BFC /* ContentView.swift */; };
 		173D79D02503912400A15BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173D79B92503912300A15BFC /* Assets.xcassets */; };
 		173D79D12503912400A15BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173D79B92503912300A15BFC /* Assets.xcassets */; };
+		1748B7AE252212D500A6DA2F /* github.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B744252212D500A6DA2F /* github.css */; };
+		1748B7AF252212D500A6DA2F /* github.css in Resources */ = {isa = PBXBuildFile; fileRef = 1748B744252212D500A6DA2F /* github.css */; };
+		1748B7CA252212D500A6DA2F /* a11y-dark.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B752252212D500A6DA2F /* a11y-dark.css */; };
+		1748B7CB252212D500A6DA2F /* a11y-dark.css in Resources */ = {isa = PBXBuildFile; fileRef = 1748B752252212D500A6DA2F /* a11y-dark.css */; };
+		1748B7DE252212D500A6DA2F /* xcode.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B75C252212D500A6DA2F /* xcode.css */; };
+		1748B7DF252212D500A6DA2F /* xcode.css in Resources */ = {isa = PBXBuildFile; fileRef = 1748B75C252212D500A6DA2F /* xcode.css */; };
+		1748B7EC252212D500A6DA2F /* vs2015.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B763252212D500A6DA2F /* vs2015.css */; };
+		1748B7ED252212D500A6DA2F /* vs2015.css in Resources */ = {isa = PBXBuildFile; fileRef = 1748B763252212D500A6DA2F /* vs2015.css */; };
+		1748B7EE252212D500A6DA2F /* a11y-light.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B764252212D500A6DA2F /* a11y-light.css */; };
+		1748B7EF252212D500A6DA2F /* a11y-light.css in Resources */ = {isa = PBXBuildFile; fileRef = 1748B764252212D500A6DA2F /* a11y-light.css */; };
+		1748B804252212D500A6DA2F /* github-gist.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B76F252212D500A6DA2F /* github-gist.css */; };
+		1748B805252212D500A6DA2F /* github-gist.css in Resources */ = {isa = PBXBuildFile; fileRef = 1748B76F252212D500A6DA2F /* github-gist.css */; };
+		1748B80E252212D500A6DA2F /* vs.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B774252212D500A6DA2F /* vs.css */; };
+		1748B80F252212D500A6DA2F /* vs.css in Resources */ = {isa = PBXBuildFile; fileRef = 1748B774252212D500A6DA2F /* vs.css */; };
+		1748B816252212D500A6DA2F /* default.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B778252212D500A6DA2F /* default.css */; };
+		1748B817252212D500A6DA2F /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 1748B778252212D500A6DA2F /* default.css */; };
+		1748B81A252212D500A6DA2F /* atom-one-light.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B77A252212D500A6DA2F /* atom-one-light.css */; };
+		1748B81B252212D500A6DA2F /* atom-one-light.css in Resources */ = {isa = PBXBuildFile; fileRef = 1748B77A252212D500A6DA2F /* atom-one-light.css */; };
+		1748B824252212D500A6DA2F /* googlecode.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B77F252212D500A6DA2F /* googlecode.css */; };
+		1748B825252212D500A6DA2F /* googlecode.css in Resources */ = {isa = PBXBuildFile; fileRef = 1748B77F252212D500A6DA2F /* googlecode.css */; };
+		1748B826252212D500A6DA2F /* atom-one-dark.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B780252212D500A6DA2F /* atom-one-dark.css */; };
+		1748B827252212D500A6DA2F /* atom-one-dark.css in Resources */ = {isa = PBXBuildFile; fileRef = 1748B780252212D500A6DA2F /* atom-one-dark.css */; };
+		1748B865252212E900A6DA2F /* highlight.pack.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B864252212E900A6DA2F /* highlight.pack.js */; };
+		1748B866252212E900A6DA2F /* highlight.pack.js in Resources */ = {isa = PBXBuildFile; fileRef = 1748B864252212E900A6DA2F /* highlight.pack.js */; };
 		1798D4EE2504E8D10070FD60 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4ED2504E8D10070FD60 /* styles.css */; };
 		1798D4EF2504E8D10070FD60 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4ED2504E8D10070FD60 /* styles.css */; };
 		1798D4F12504EEBD0070FD60 /* test.md in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4F02504EEBD0070FD60 /* test.md */; };
@@ -46,6 +70,18 @@
 			dstPath = highlightjs;
 			dstSubfolderSpec = 7;
 			files = (
+				1748B80E252212D500A6DA2F /* vs.css in CopyFiles */,
+				1748B7EE252212D500A6DA2F /* a11y-light.css in CopyFiles */,
+				1748B824252212D500A6DA2F /* googlecode.css in CopyFiles */,
+				1748B865252212E900A6DA2F /* highlight.pack.js in CopyFiles */,
+				1748B826252212D500A6DA2F /* atom-one-dark.css in CopyFiles */,
+				1748B81A252212D500A6DA2F /* atom-one-light.css in CopyFiles */,
+				1748B804252212D500A6DA2F /* github-gist.css in CopyFiles */,
+				1748B7AE252212D500A6DA2F /* github.css in CopyFiles */,
+				1748B7EC252212D500A6DA2F /* vs2015.css in CopyFiles */,
+				1748B7DE252212D500A6DA2F /* xcode.css in CopyFiles */,
+				1748B7CA252212D500A6DA2F /* a11y-dark.css in CopyFiles */,
+				1748B816252212D500A6DA2F /* default.css in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +98,18 @@
 		173D79C62503912400A15BFC /* Markdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Markdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		173D79C82503912400A15BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		173D79C92503912400A15BFC /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		1748B744252212D500A6DA2F /* github.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = github.css; sourceTree = "<group>"; };
+		1748B752252212D500A6DA2F /* a11y-dark.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "a11y-dark.css"; sourceTree = "<group>"; };
+		1748B75C252212D500A6DA2F /* xcode.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = xcode.css; sourceTree = "<group>"; };
+		1748B763252212D500A6DA2F /* vs2015.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = vs2015.css; sourceTree = "<group>"; };
+		1748B764252212D500A6DA2F /* a11y-light.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "a11y-light.css"; sourceTree = "<group>"; };
+		1748B76F252212D500A6DA2F /* github-gist.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "github-gist.css"; sourceTree = "<group>"; };
+		1748B774252212D500A6DA2F /* vs.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = vs.css; sourceTree = "<group>"; };
+		1748B778252212D500A6DA2F /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; };
+		1748B77A252212D500A6DA2F /* atom-one-light.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "atom-one-light.css"; sourceTree = "<group>"; };
+		1748B77F252212D500A6DA2F /* googlecode.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = googlecode.css; sourceTree = "<group>"; };
+		1748B780252212D500A6DA2F /* atom-one-dark.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "atom-one-dark.css"; sourceTree = "<group>"; };
+		1748B864252212E900A6DA2F /* highlight.pack.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highlight.pack.js; sourceTree = "<group>"; };
 		1798D4ED2504E8D10070FD60 /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
 		1798D4F02504EEBD0070FD60 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
 		1798D4F32504EFB50070FD60 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
@@ -112,6 +160,7 @@
 				1798D4F32504EFB50070FD60 /* index.html */,
 				1798D4ED2504E8D10070FD60 /* styles.css */,
 				1798D4F02504EEBD0070FD60 /* test.md */,
+				1748B868252212F100A6DA2F /* highlightjs */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -140,6 +189,33 @@
 				173D79C92503912400A15BFC /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		1748B73B252212D500A6DA2F /* styles */ = {
+			isa = PBXGroup;
+			children = (
+				1748B752252212D500A6DA2F /* a11y-dark.css */,
+				1748B764252212D500A6DA2F /* a11y-light.css */,
+				1748B780252212D500A6DA2F /* atom-one-dark.css */,
+				1748B77A252212D500A6DA2F /* atom-one-light.css */,
+				1748B778252212D500A6DA2F /* default.css */,
+				1748B76F252212D500A6DA2F /* github-gist.css */,
+				1748B744252212D500A6DA2F /* github.css */,
+				1748B77F252212D500A6DA2F /* googlecode.css */,
+				1748B774252212D500A6DA2F /* vs.css */,
+				1748B763252212D500A6DA2F /* vs2015.css */,
+				1748B75C252212D500A6DA2F /* xcode.css */,
+			);
+			path = styles;
+			sourceTree = "<group>";
+		};
+		1748B868252212F100A6DA2F /* highlightjs */ = {
+			isa = PBXGroup;
+			children = (
+				1748B864252212E900A6DA2F /* highlight.pack.js */,
+				1748B73B252212D500A6DA2F /* styles */,
+			);
+			path = highlightjs;
 			sourceTree = "<group>";
 		};
 		1798D50725054CFA0070FD60 /* Frameworks */ = {
@@ -251,9 +327,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				1798D4F52504EFB60070FD60 /* index.html in Resources */,
+				1748B80F252212D500A6DA2F /* vs.css in Resources */,
+				1748B7EF252212D500A6DA2F /* a11y-light.css in Resources */,
+				1748B825252212D500A6DA2F /* googlecode.css in Resources */,
+				1748B866252212E900A6DA2F /* highlight.pack.js in Resources */,
 				1798D4F22504EEBD0070FD60 /* test.md in Resources */,
+				1748B827252212D500A6DA2F /* atom-one-dark.css in Resources */,
 				173D79D12503912400A15BFC /* Assets.xcassets in Resources */,
 				1798D4EF2504E8D10070FD60 /* styles.css in Resources */,
+				1748B81B252212D500A6DA2F /* atom-one-light.css in Resources */,
+				1748B805252212D500A6DA2F /* github-gist.css in Resources */,
+				1748B7AF252212D500A6DA2F /* github.css in Resources */,
+				1748B7ED252212D500A6DA2F /* vs2015.css in Resources */,
+				1748B7DF252212D500A6DA2F /* xcode.css in Resources */,
+				1748B7CB252212D500A6DA2F /* a11y-dark.css in Resources */,
+				1748B817252212D500A6DA2F /* default.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

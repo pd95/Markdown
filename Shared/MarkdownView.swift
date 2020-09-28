@@ -18,27 +18,6 @@ let testMarkDown: String = {
     return string
 }()
 
-let stylesCSS: String = {
-    guard let resourceUrl = Bundle.main.url(forResource: "styles", withExtension: "css"),
-          let data = try? Data(contentsOf: resourceUrl),
-          let string = String(data: data, encoding: .utf8)
-    else {
-        return "# styles.css could not be loaded"
-    }
-    return string
-}()
-
-
-let templateHTML: String = {
-    guard let resourceUrl = Bundle.main.url(forResource: "template", withExtension: "html"),
-          let data = try? Data(contentsOf: resourceUrl),
-          let string = String(data: data, encoding: .utf8)
-    else {
-        return "test.html could not be loaded"
-    }
-    return string.replacingOccurrences(of: "___CSS___", with: stylesCSS)
-}()
-
 func renderMarkdown(_ string: String) -> String? {
     let options = CMARK_OPT_UNSAFE
 

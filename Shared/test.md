@@ -36,7 +36,9 @@ HTML entities: &ge; &copy;
 ### Code blocks
 
 ```swift
-let x = 1
+let x = 12.9
+var aString = "Hello world!"
+// Comment bla
 ```
 
 ~~~

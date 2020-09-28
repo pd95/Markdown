@@ -16,7 +16,14 @@ struct WebView: UIViewRepresentable {
     func makeUIView(context: Context) -> WKWebView {
         print("\(#function)")
 
+        // Configure WKWebView to report JS errors using our handler
+        let userContentController = WKUserContentController()
+        userContentController.add(context.coordinator, name: "error")
+
         let webConfiguration = WKWebViewConfiguration()
+        webConfiguration.userContentController = userContentController
+
+
         let webView = WKWebView(frame: .zero, configuration: webConfiguration)
 
         webView.uiDelegate = context.coordinator
@@ -36,7 +43,7 @@ struct WebView: UIViewRepresentable {
         return Coordinator(parent: self)
     }
 
-    class Coordinator: NSObject, WKUIDelegate, WKNavigationDelegate {
+    class Coordinator: NSObject, WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler {
         let parent: WebView
         var oldHtml: String = ""
         var delayedHtml: String = ""
@@ -91,6 +98,18 @@ struct WebView: UIViewRepresentable {
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             if !webView.isLoading {
                 load(webView: webView, html: delayedHtml)
+            }
+        }
+
+        // MARK: WKScriptMessageHandler
+        func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+            switch message.name {
+            case "error":
+                // You should actually handle the error :)
+                let error = (message.body as? [String: Any])?["message"] as? String ?? "unknown"
+                print("Received JavaScript error: \(error)")
+            default:
+                assertionFailure("Received invalid message: \(message.name)")
             }
         }
     }

@@ -4,15 +4,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" >
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="highlightjs/a11y-light.css">
+    <script src="highlightjs/highlight.pack.js"></script>
     <script>
+window.onerror = (msg, url, line, column, error) => {
+  const message = {
+    message: msg,
+    url: url,
+    line: line,
+    column: column,
+    error: JSON.stringify(error)
+  }
+
+  if (window.webkit) {
+    window.webkit.messageHandlers.error.postMessage(message);
+  } else {
+    console.log("Error:", message);
+  }
+};
+
 function setBody(newValue) {
     var bodyDiv = document.getElementById("main");
 
     // Save current scroll position
     var y = window.scrollY
 
-    // Update HTML content
+    // Update HTML content...
     bodyDiv.innerHTML = newValue;
+
+    // ...and refresh highlighting
+    document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightBlock(block);
+    });
 
     // restore the scroll position
     window.scrollY = y
