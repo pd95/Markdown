@@ -18,6 +18,7 @@ struct WebView: UIViewRepresentable {
         let webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.loadHTMLString(html, baseURL: nil)
         webView.uiDelegate = context.coordinator
+        webView.navigationDelegate = context.coordinator
         return webView
     }
 
@@ -30,7 +31,7 @@ struct WebView: UIViewRepresentable {
         return Coordinator(parent: self)
     }
 
-    class Coordinator: NSObject, WKUIDelegate {
+    class Coordinator: NSObject, WKUIDelegate, WKNavigationDelegate {
         let parent: WebView
         var oldHtml: String = ""
 
@@ -45,6 +46,13 @@ struct WebView: UIViewRepresentable {
             }
             webView.loadHTMLString(html, baseURL: nil)
             oldHtml = html
+        }
+
+        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+            // do not allow navigating away from document
+            let decision: WKNavigationActionPolicy = navigationAction.navigationType == .linkActivated && !(navigationAction.request.url?.host ?? "").isEmpty ? .cancel : .allow
+            print("\(#function): navigationAction=\(navigationAction) request=\(navigationAction.request.url?.host) ==> decision: \(decision.rawValue)")
+            decisionHandler(decision)
         }
     }
 }
