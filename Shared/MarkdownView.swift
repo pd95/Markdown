@@ -88,13 +88,10 @@ func renderMarkdown(_ string: String) -> String? {
 
 class ViewModel: ObservableObject {
     @Binding var document: MarkdownDocument
-    let template: String
     @Published var html: String = ""
 
     init(document: Binding<MarkdownDocument>) {
         _document = document
-        template = templateHTML.replacingOccurrences(of: "___CSS___", with: stylesCSS)
-            .replacingOccurrences(of: "___TITLE___", with: document.wrappedValue.name)
         renderHTML()
     }
 
@@ -103,10 +100,8 @@ class ViewModel: ObservableObject {
         DispatchQueue.global().async { [weak self] in
             guard let self = self else { return }
             if let html = renderMarkdown(text) {
-                print(html)
-                let finalHTML = templateHTML.replacingOccurrences(of: "___MARKDOWN___", with: html)
                 DispatchQueue.main.async {
-                    self.html = finalHTML
+                    self.html = html
                 }
             }
             else {
@@ -120,7 +115,7 @@ struct MarkdownView: View {
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
-        WebView(html: viewModel.html)
+        WebView(indexHtmlUrl: Bundle.main.url(forResource: "index", withExtension: "html")!, injectHtml: viewModel.html)
             .onChange(of: viewModel.document.text, perform: { value in
                 viewModel.renderHTML()
             })

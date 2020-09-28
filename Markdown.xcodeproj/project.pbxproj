@@ -21,8 +21,8 @@
 		1798D4EF2504E8D10070FD60 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4ED2504E8D10070FD60 /* styles.css */; };
 		1798D4F12504EEBD0070FD60 /* test.md in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4F02504EEBD0070FD60 /* test.md */; };
 		1798D4F22504EEBD0070FD60 /* test.md in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4F02504EEBD0070FD60 /* test.md */; };
-		1798D4F42504EFB60070FD60 /* template.html in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4F32504EFB50070FD60 /* template.html */; };
-		1798D4F52504EFB60070FD60 /* template.html in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4F32504EFB50070FD60 /* template.html */; };
+		1798D4F42504EFB60070FD60 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4F32504EFB50070FD60 /* index.html */; };
+		1798D4F52504EFB60070FD60 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4F32504EFB50070FD60 /* index.html */; };
 		1798D4F725053B4A0070FD60 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798D4F625053B4A0070FD60 /* MarkdownView.swift */; };
 		1798D4F825053B4A0070FD60 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798D4F625053B4A0070FD60 /* MarkdownView.swift */; };
 		1798D4FA25053BAD0070FD60 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798D4F925053BAD0070FD60 /* WebView.swift */; };
@@ -40,6 +40,15 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1748B86B2522134300A6DA2F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = highlightjs;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +64,7 @@
 		173D79C92503912400A15BFC /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		1798D4ED2504E8D10070FD60 /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
 		1798D4F02504EEBD0070FD60 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
-		1798D4F32504EFB50070FD60 /* template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template.html; sourceTree = "<group>"; };
+		1798D4F32504EFB50070FD60 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		1798D4F625053B4A0070FD60 /* MarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownView.swift; sourceTree = "<group>"; };
 		1798D4F925053BAD0070FD60 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,7 +109,7 @@
 				1798D4F625053B4A0070FD60 /* MarkdownView.swift */,
 				1798D4F925053BAD0070FD60 /* WebView.swift */,
 				173D79B92503912300A15BFC /* Assets.xcassets */,
-				1798D4F32504EFB50070FD60 /* template.html */,
+				1798D4F32504EFB50070FD60 /* index.html */,
 				1798D4ED2504E8D10070FD60 /* styles.css */,
 				1798D4F02504EEBD0070FD60 /* test.md */,
 			);
@@ -152,6 +161,7 @@
 				173D79BB2503912300A15BFC /* Frameworks */,
 				173D79BC2503912300A15BFC /* Resources */,
 				173D79FB2503C9F700A15BFC /* Embed Frameworks */,
+				1748B86B2522134300A6DA2F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -229,7 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1798D4F42504EFB60070FD60 /* template.html in Resources */,
+				1798D4F42504EFB60070FD60 /* index.html in Resources */,
 				1798D4F12504EEBD0070FD60 /* test.md in Resources */,
 				173D79D02503912400A15BFC /* Assets.xcassets in Resources */,
 				1798D4EE2504E8D10070FD60 /* styles.css in Resources */,
@@ -240,7 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1798D4F52504EFB60070FD60 /* template.html in Resources */,
+				1798D4F52504EFB60070FD60 /* index.html in Resources */,
 				1798D4F22504EEBD0070FD60 /* test.md in Resources */,
 				173D79D12503912400A15BFC /* Assets.xcassets in Resources */,
 				1798D4EF2504E8D10070FD60 /* styles.css in Resources */,
