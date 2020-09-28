@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1713E3F725227DA300EB8E01 /* a11y-adapt.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1713E3F625227DA300EB8E01 /* a11y-adapt.css */; };
-		1713E3F825227DA300EB8E01 /* a11y-adapt.css in Resources */ = {isa = PBXBuildFile; fileRef = 1713E3F625227DA300EB8E01 /* a11y-adapt.css */; };
+		1713E3F825227DA300EB8E01 /* a11y-adapt.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1713E3F625227DA300EB8E01 /* a11y-adapt.css */; };
 		1717F0A5251D3FDD00F3DD8D /* cmark-gfm in Frameworks */ = {isa = PBXBuildFile; productRef = 1717F0A4251D3FDD00F3DD8D /* cmark-gfm */; };
 		1717F0A7251D3FE300F3DD8D /* cmark-gfm in Frameworks */ = {isa = PBXBuildFile; productRef = 1717F0A6251D3FE300F3DD8D /* cmark-gfm */; };
 		173D79CA2503912400A15BFC /* MarkdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D79B62503912100A15BFC /* MarkdownApp.swift */; };
@@ -20,7 +20,7 @@
 		173D79D02503912400A15BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173D79B92503912300A15BFC /* Assets.xcassets */; };
 		173D79D12503912400A15BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173D79B92503912300A15BFC /* Assets.xcassets */; };
 		1748B865252212E900A6DA2F /* highlight.pack.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B864252212E900A6DA2F /* highlight.pack.js */; };
-		1748B866252212E900A6DA2F /* highlight.pack.js in Resources */ = {isa = PBXBuildFile; fileRef = 1748B864252212E900A6DA2F /* highlight.pack.js */; };
+		1748B866252212E900A6DA2F /* highlight.pack.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B864252212E900A6DA2F /* highlight.pack.js */; };
 		1798D4EE2504E8D10070FD60 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4ED2504E8D10070FD60 /* styles.css */; };
 		1798D4EF2504E8D10070FD60 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4ED2504E8D10070FD60 /* styles.css */; };
 		1798D4F12504EEBD0070FD60 /* test.md in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4F02504EEBD0070FD60 /* test.md */; };
@@ -34,6 +34,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1713E3FD25228C1400EB8E01 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = highlightjs;
+			dstSubfolderSpec = 7;
+			files = (
+				1748B866252212E900A6DA2F /* highlight.pack.js in CopyFiles */,
+				1713E3F825227DA300EB8E01 /* a11y-adapt.css in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		173D79FB2503C9F700A15BFC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,8 +61,8 @@
 			dstPath = highlightjs;
 			dstSubfolderSpec = 7;
 			files = (
-				1713E3F725227DA300EB8E01 /* a11y-adapt.css in CopyFiles */,
 				1748B865252212E900A6DA2F /* highlight.pack.js in CopyFiles */,
+				1713E3F725227DA300EB8E01 /* a11y-adapt.css in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +211,7 @@
 				173D79C22503912400A15BFC /* Sources */,
 				173D79C32503912400A15BFC /* Frameworks */,
 				173D79C42503912400A15BFC /* Resources */,
+				1713E3FD25228C1400EB8E01 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -269,8 +281,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1798D4F52504EFB60070FD60 /* index.html in Resources */,
-				1713E3F825227DA300EB8E01 /* a11y-adapt.css in Resources */,
-				1748B866252212E900A6DA2F /* highlight.pack.js in Resources */,
 				1798D4F22504EEBD0070FD60 /* test.md in Resources */,
 				173D79D12503912400A15BFC /* Assets.xcassets in Resources */,
 				1798D4EF2504E8D10070FD60 /* styles.css in Resources */,
