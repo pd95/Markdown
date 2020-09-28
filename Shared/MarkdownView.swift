@@ -40,21 +40,22 @@ let templateHTML: String = {
 }()
 
 func renderMarkdown(_ string: String) -> String? {
-    let options = CMARK_OPT_DEFAULT
+    let options = CMARK_OPT_UNSAFE
 
     cmark_gfm_core_extensions_ensure_registered()
 
     guard let parser = cmark_parser_new(options) else {
         return nil
     }
-
     defer {
         cmark_parser_free(parser)
     }
 
-    for extensionName in ["table","autolink","strikethrough","tagfilter","tasklist"] {
-        if let foundExtension = cmark_find_syntax_extension(extensionName) {
-            cmark_parser_attach_syntax_extension(parser, foundExtension)
+    // Attach parser extensions
+    for extensionName in ["table","autolink","strikethrough","tasklist"] {
+        let foundExtension = cmark_find_syntax_extension(extensionName)
+        if cmark_parser_attach_syntax_extension(parser, foundExtension) != 0 {
+            print("Attached extension \(extensionName)")
         }
         else {
             print("Unable to attach extension \(extensionName)")
@@ -66,15 +67,23 @@ func renderMarkdown(_ string: String) -> String? {
     guard let doc = cmark_parser_finish(parser) else {
         return nil
     }
-    let html = cmark_render_html(doc, options, nil);
-    cmark_node_free(doc);
-
-    if let strPointer = html {
-        let output = String(cString: strPointer)
-        free(html)
-        return output
+    defer {
+        cmark_node_free(doc);
     }
-    return nil
+
+    // Enable HTML specific extension to render output
+    var htmlExtensions: UnsafeMutablePointer<cmark_llist>?
+    if let tagfilter = cmark_find_syntax_extension("tagfilter") {
+        htmlExtensions = cmark_llist_append(cmark_get_default_mem_allocator(), nil, tagfilter)
+    }
+    guard let html = cmark_render_html(doc, options, htmlExtensions) else {
+        return nil
+    }
+    defer {
+        free(html)
+    }
+
+    return String(cString: html)
 }
 
 class ViewModel: ObservableObject {
