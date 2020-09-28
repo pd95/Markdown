@@ -1,11 +1,36 @@
-/* a11y-dark theme */
+/* a11y-adapt theme */
 /* Based on the Tomorrow Night Eighties theme: https://github.com/isagalaev/highlight.js/blob/master/src/styles/tomorrow-night-eighties.css */
-/* @author: ericwbailey */
+/* @author: ericwbailey, philipp */
 
+:root {
+    --comment: #696969;
+    --red: #d91e18;
+    --orange: #aa5d00;
+    --yellow: #aa5d00;
+    --green: #008000;
+    --blue: #007faa;
+    --purple: #7928a1;
+    --block-bg: #fefefe;
+    --block-fg: #545454;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --comment: #d4d0ab;
+        --red: #ffa07a;
+        --orange: #f5ab35;
+        --yellow: #ffd700;
+        --green: #abe338;
+        --blue: #00e0e0;
+        --purple: #dcc6e0;
+        --block-bg: #2b2b2b;
+        --block-fg: #f8f8f2;
+    }
+}
 /* Comment */
 .hljs-comment,
 .hljs-quote {
-  color: #d4d0ab;
+  color: var(--comment);
 }
 
 /* Red */
@@ -17,7 +42,7 @@
 .hljs-selector-class,
 .hljs-regexp,
 .hljs-deletion {
-  color: #ffa07a;
+  color: var(--red);
 }
 
 /* Orange */
@@ -29,12 +54,12 @@
 .hljs-params,
 .hljs-meta,
 .hljs-link {
-  color: #f5ab35;
+  color: var(--orange);
 }
 
 /* Yellow */
 .hljs-attribute {
-  color: #ffd700;
+  color: var(--yellow);
 }
 
 /* Green */
@@ -42,26 +67,26 @@
 .hljs-symbol,
 .hljs-bullet,
 .hljs-addition {
-  color: #abe338;
+  color: var(--green);
 }
 
 /* Blue */
 .hljs-title,
 .hljs-section {
-  color: #00e0e0;
+  color: var(--blue);
 }
 
 /* Purple */
 .hljs-keyword,
 .hljs-selector-tag {
-  color: #dcc6e0;
+  color: var(--purple);
 }
 
 .hljs {
   display: block;
   overflow-x: auto;
-  background: #2b2b2b;
-  color: #f8f8f2;
+  background: var(--block-bg);
+  color: var(--block-fg);
   padding: 0.5em;
 }
 
