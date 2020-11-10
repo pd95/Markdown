@@ -12,7 +12,7 @@ A simple prototype to test my integration of the GitHub markdown implementation 
 
 ## Screenshots
 
-![Rendered Markdown](_screenshots/rendered_markdown.png)
-![Embedded Editor](_screenshots/embedded_editor.png)
-![Syntax Highlighting](_screenshots/syntax_highlighting.png)
-![Syntax Highlighting (dark mode)](_screenshots/syntax_highlighting_dark.png)
+<a target="_blank" href="_screenshots/rendered_markdown.png"><img src="_screenshots/rendered_markdown.png" width="24%" alt="Rendered Markdown"></a>
+<a target="_blank" href="_screenshots/embedded_editor.png"><img src="_screenshots/embedded_editor.png" width="24%" alt="Embedded Editor"></a>
+<a target="_blank" href="_screenshots/syntax_highlighting.png"><img src="_screenshots/syntax_highlighting.png" width="24%" alt="Syntax Highlighting"></a>
+<a target="_blank" href="_screenshots/syntax_highlighting_dark.png"><img src="_screenshots/syntax_highlighting_dark.png" width="24%" alt="Syntax Highlighting (dark mode)"></a>

@@ -81,6 +81,7 @@
 		173D79C82503912400A15BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		173D79C92503912400A15BFC /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		1748B864252212E900A6DA2F /* highlight.pack.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highlight.pack.js; sourceTree = "<group>"; };
+		1784471C255AFF220022FBBF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../Markdown/README.md; sourceTree = "<group>"; };
 		1798D4ED2504E8D10070FD60 /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
 		1798D4F02504EEBD0070FD60 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
 		1798D4F32504EFB50070FD60 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		173D79B02503912000A15BFC = {
 			isa = PBXGroup;
 			children = (
+				1784471C255AFF220022FBBF /* README.md */,
 				173D79B52503912100A15BFC /* Shared */,
 				173D79C02503912400A15BFC /* iOS */,
 				173D79C72503912400A15BFC /* macOS */,
@@ -496,7 +498,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-                MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Markdown;
 				PRODUCT_NAME = Markdown;
 				SDKROOT = macosx;
@@ -521,7 +523,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-                MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Markdown;
 				PRODUCT_NAME = Markdown;
 				SDKROOT = macosx;
