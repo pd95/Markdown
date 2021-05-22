@@ -34,9 +34,9 @@ struct WebView: UIViewRepresentable {
         return webView
     }
 
-    func updateUIView(_ uiView: WKWebView, context: Context) {
+    func updateUIView(_ webView: WKWebView, context: Context) {
         print("\(#function)")
-        context.coordinator.load(webView: uiView, html: injectHtml)
+        context.coordinator.load(webView: webView, html: injectHtml)
     }
 
     func makeCoordinator() -> Coordinator {

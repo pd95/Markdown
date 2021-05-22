@@ -30,7 +30,7 @@
 		1798D4F725053B4A0070FD60 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798D4F625053B4A0070FD60 /* MarkdownView.swift */; };
 		1798D4F825053B4A0070FD60 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798D4F625053B4A0070FD60 /* MarkdownView.swift */; };
 		1798D4FA25053BAD0070FD60 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798D4F925053BAD0070FD60 /* WebView.swift */; };
-		1798D4FB25053BAD0070FD60 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798D4F925053BAD0070FD60 /* WebView.swift */; };
+		17CC134226595119005718AB /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC134126595112005718AB /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +71,7 @@
 /* Begin PBXFileReference section */
 		1713E3F625227DA300EB8E01 /* a11y-adapt.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "a11y-adapt.css"; sourceTree = "<group>"; };
 		1717F0A1251D3FAD00F3DD8D /* swift-cmark-gfm */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "swift-cmark-gfm"; path = "../swift-cmark-gfm"; sourceTree = "<group>"; };
+		172EB10A262F3BAC00B47105 /* Markdown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Markdown.entitlements; sourceTree = "<group>"; };
 		173D79B62503912100A15BFC /* MarkdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownApp.swift; sourceTree = "<group>"; };
 		173D79B72503912100A15BFC /* MarkdownDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownDocument.swift; sourceTree = "<group>"; };
 		173D79B82503912100A15BFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,12 +82,13 @@
 		173D79C82503912400A15BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		173D79C92503912400A15BFC /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		1748B864252212E900A6DA2F /* highlight.pack.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highlight.pack.js; sourceTree = "<group>"; };
-		1784471C255AFF220022FBBF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../Markdown/README.md; sourceTree = "<group>"; };
+		1784471C255AFF220022FBBF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1798D4ED2504E8D10070FD60 /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
 		1798D4F02504EEBD0070FD60 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
 		1798D4F32504EFB50070FD60 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		1798D4F625053B4A0070FD60 /* MarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownView.swift; sourceTree = "<group>"; };
 		1798D4F925053BAD0070FD60 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		17CC134126595112005718AB /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				1784471C255AFF220022FBBF /* README.md */,
+				172EB10A262F3BAC00B47105 /* Markdown.entitlements */,
 				173D79B52503912100A15BFC /* Shared */,
 				173D79C02503912400A15BFC /* iOS */,
 				173D79C72503912400A15BFC /* macOS */,
@@ -128,7 +131,6 @@
 				173D79B72503912100A15BFC /* MarkdownDocument.swift */,
 				173D79B82503912100A15BFC /* ContentView.swift */,
 				1798D4F625053B4A0070FD60 /* MarkdownView.swift */,
-				1798D4F925053BAD0070FD60 /* WebView.swift */,
 				173D79B92503912300A15BFC /* Assets.xcassets */,
 				1798D4F32504EFB50070FD60 /* index.html */,
 				1798D4ED2504E8D10070FD60 /* styles.css */,
@@ -150,6 +152,7 @@
 		173D79C02503912400A15BFC /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1798D4F925053BAD0070FD60 /* WebView.swift */,
 				173D79C12503912400A15BFC /* Info.plist */,
 			);
 			path = iOS;
@@ -158,6 +161,7 @@
 		173D79C72503912400A15BFC /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				17CC134126595112005718AB /* WebView.swift */,
 				173D79C82503912400A15BFC /* Info.plist */,
 				173D79C92503912400A15BFC /* macOS.entitlements */,
 			);
@@ -309,7 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				173D79CB2503912400A15BFC /* MarkdownApp.swift in Sources */,
-				1798D4FB25053BAD0070FD60 /* WebView.swift in Sources */,
+				17CC134226595119005718AB /* WebView.swift in Sources */,
 				173D79CD2503912400A15BFC /* MarkdownDocument.swift in Sources */,
 				173D79CF2503912400A15BFC /* ContentView.swift in Sources */,
 				1798D4F825053B4A0070FD60 /* MarkdownView.swift in Sources */,
@@ -437,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Markdown.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8CC95REUG;
@@ -450,7 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Markdown;
 				PRODUCT_NAME = Markdown;
 				SDKROOT = iphoneos;
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,6 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Markdown.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8CC95REUG;
@@ -474,7 +480,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Markdown;
 				PRODUCT_NAME = Markdown;
 				SDKROOT = iphoneos;
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
