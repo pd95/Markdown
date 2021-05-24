@@ -94,7 +94,7 @@ struct MarkdownView: View {
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
-        WebView(indexHtmlUrl: Bundle.main.url(forResource: "index", withExtension: "html")!, injectHtml: viewModel.html)
+        WebView(indexHtmlUrl: Bundle.main.url(forResource: "index.all-in-one", withExtension: "html")!, injectHtml: viewModel.html)
             .onChange(of: viewModel.document.text, perform: { value in
                 viewModel.renderHTML()
             })
