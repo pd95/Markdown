@@ -28,6 +28,8 @@ struct WebView: NSViewRepresentable {
 
         webView.uiDelegate = context.coordinator
         webView.navigationDelegate = context.coordinator
+        
+        webView.loadFileURL(indexHtmlUrl, allowingReadAccessTo: indexHtmlUrl)
 
         return webView
     }
