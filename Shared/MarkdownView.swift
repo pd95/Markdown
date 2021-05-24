@@ -74,6 +74,12 @@ class ViewModel: ObservableObject {
         renderHTML()
     }
 
+    let templateURL: URL = Bundle.main.url(forResource: "index.all-in-one", withExtension: "html")!
+    
+    var baseURL: URL? {
+        document.fileURL?.deletingLastPathComponent()
+    }
+
     func renderHTML() {
         let text = document.text
         DispatchQueue.global().async { [weak self] in
@@ -94,7 +100,9 @@ struct MarkdownView: View {
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
-        WebView(indexHtmlUrl: Bundle.main.url(forResource: "index.all-in-one", withExtension: "html")!, injectHtml: viewModel.html)
+        WebView(indexHtmlUrl: viewModel.templateURL,
+                injectHtml: viewModel.html,
+                baseURL: viewModel.baseURL)
             .onChange(of: viewModel.document.text, perform: { value in
                 viewModel.renderHTML()
             })

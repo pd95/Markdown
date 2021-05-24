@@ -12,6 +12,7 @@ struct WebView: NSViewRepresentable {
     typealias NSViewType = WKWebView
     let indexHtmlUrl: URL
     let injectHtml: String
+    let baseURL: URL?
 
     func makeNSView(context: Context) -> WKWebView {
         print("\(#function)")
@@ -23,20 +24,17 @@ struct WebView: NSViewRepresentable {
         let webConfiguration = WKWebViewConfiguration()
         webConfiguration.userContentController = userContentController
 
-
         let webView = WKWebView(frame: .zero, configuration: webConfiguration)
 
         webView.uiDelegate = context.coordinator
         webView.navigationDelegate = context.coordinator
-
-        webView.load(URLRequest(url: indexHtmlUrl))
 
         return webView
     }
 
     func updateNSView(_ webView: WKWebView, context: Context) {
         print("\(#function)")
-        context.coordinator.load(webView: webView, html: injectHtml)
+        context.coordinator.load(webView: webView, html: injectHtml, baseURL: baseURL)
     }
 
     func makeCoordinator() -> Coordinator {
@@ -45,27 +43,45 @@ struct WebView: NSViewRepresentable {
 
     class Coordinator: NSObject, WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler {
         let parent: WebView
+        let indexHtml: String
         var oldHtml: String = ""
+        var oldBaseURL: URL? = nil
         var delayedHtml: String = ""
         var runningHtml: String = ""
 
         init(parent: WebView) {
             self.parent = parent
+
+            // Preload content of "all-in-one" index.html
+            let data = (try? Data(contentsOf: parent.indexHtmlUrl)) ?? Data()
+            self.indexHtml = String(data: data, encoding: .utf8)!
         }
 
-        func load(webView: WKWebView, html: String) {
-            print("\(#function)")
+        func load(webView: WKWebView, html: String, baseURL: URL?) {
+            print("\(#function) baseURL=\(baseURL)")
+            if baseURL != oldBaseURL {
+                print("Base URL changed => reloading from baseURL = \(baseURL)")
+                oldHtml = ""
+                runningHtml = ""
+                delayedHtml = ""
+                oldBaseURL = baseURL
+                
+                // Simulate loading "index.html" from giveb base URL to allow relative references
+                webView.loadHTMLString(indexHtml, baseURL: parent.baseURL ?? parent.indexHtmlUrl)
+            }
+
             guard html != oldHtml else {
                 print("Skip loading, same data")
                 return
             }
+            
             guard html != runningHtml else {
                 print("Skip loading, already running with same HTML")
                 return
             }
 
             if webView.isLoading {
-                print("Skip loading")
+                print("Skip loading, webview is already loading")
                 delayedHtml = html
             }
             else {
@@ -86,7 +102,7 @@ struct WebView: NSViewRepresentable {
             }
         }
 
-        // MARK: WKUIDelegate
+        // MARK: WKNavigationDelegate
         func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
             // do not allow navigating away from document
             let decision: WKNavigationActionPolicy = navigationAction.navigationType == .linkActivated && !(navigationAction.request.url?.host ?? "").isEmpty ? .cancel : .allow
@@ -94,10 +110,9 @@ struct WebView: NSViewRepresentable {
             decisionHandler(decision)
         }
 
-        // MARK: WKNavigationDelegate
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             if !webView.isLoading {
-                load(webView: webView, html: delayedHtml)
+                load(webView: webView, html: delayedHtml, baseURL: parent.baseURL)
             }
         }
 

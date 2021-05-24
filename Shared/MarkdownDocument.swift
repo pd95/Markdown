@@ -17,10 +17,16 @@ extension UTType {
 struct MarkdownDocument: FileDocument {
     var text: String
     let name: String
+    var fileURL: URL? {
+        didSet {
+            print("MarkdownDocument fileURL set to \(fileURL)")
+        }
+    }
 
-    init(text: String = "# Hello, world!", name: String = "Unnamed") {
+    init(text: String = "# Hello, world!", name: String = "Unnamed", fileURL: URL? = nil) {
         self.text = text
         self.name = name
+        self.fileURL = fileURL
     }
 
     static var readableContentTypes: [UTType] { [.markdown] }
