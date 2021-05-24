@@ -132,10 +132,8 @@
 				173D79B82503912100A15BFC /* ContentView.swift */,
 				1798D4F625053B4A0070FD60 /* MarkdownView.swift */,
 				173D79B92503912300A15BFC /* Assets.xcassets */,
-				1798D4F32504EFB50070FD60 /* index.html */,
-				1798D4ED2504E8D10070FD60 /* styles.css */,
+				17ABC01D265C54EA003AFE1F /* HTML-Template */,
 				1798D4F02504EEBD0070FD60 /* test.md */,
-				1748B868252212F100A6DA2F /* highlightjs */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -183,6 +181,16 @@
 				1717F0A1251D3FAD00F3DD8D /* swift-cmark-gfm */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17ABC01D265C54EA003AFE1F /* HTML-Template */ = {
+			isa = PBXGroup;
+			children = (
+				1798D4F32504EFB50070FD60 /* index.html */,
+				1798D4ED2504E8D10070FD60 /* styles.css */,
+				1748B868252212F100A6DA2F /* highlightjs */,
+			);
+			path = "HTML-Template";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
