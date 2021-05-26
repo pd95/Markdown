@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1713E3F725227DA300EB8E01 /* a11y-adapt.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1713E3F625227DA300EB8E01 /* a11y-adapt.css */; };
 		1717F0A5251D3FDD00F3DD8D /* cmark-gfm in Frameworks */ = {isa = PBXBuildFile; productRef = 1717F0A4251D3FDD00F3DD8D /* cmark-gfm */; };
 		1717F0A7251D3FE300F3DD8D /* cmark-gfm in Frameworks */ = {isa = PBXBuildFile; productRef = 1717F0A6251D3FE300F3DD8D /* cmark-gfm */; };
 		173D79CA2503912400A15BFC /* MarkdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D79B62503912100A15BFC /* MarkdownApp.swift */; };
@@ -18,11 +17,9 @@
 		173D79CF2503912400A15BFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D79B82503912100A15BFC /* ContentView.swift */; };
 		173D79D02503912400A15BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173D79B92503912300A15BFC /* Assets.xcassets */; };
 		173D79D12503912400A15BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173D79B92503912300A15BFC /* Assets.xcassets */; };
-		1748B865252212E900A6DA2F /* highlight.pack.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1748B864252212E900A6DA2F /* highlight.pack.js */; };
-		1798D4EE2504E8D10070FD60 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4ED2504E8D10070FD60 /* styles.css */; };
+		177A6FF6265E4AA400D9F862 /* index.all-in-one.html in Resources */ = {isa = PBXBuildFile; fileRef = 17ABC01F265C560D003AFE1F /* index.all-in-one.html */; };
 		1798D4F12504EEBD0070FD60 /* test.md in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4F02504EEBD0070FD60 /* test.md */; };
 		1798D4F22504EEBD0070FD60 /* test.md in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4F02504EEBD0070FD60 /* test.md */; };
-		1798D4F42504EFB60070FD60 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 1798D4F32504EFB50070FD60 /* index.html */; };
 		1798D4F725053B4A0070FD60 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798D4F625053B4A0070FD60 /* MarkdownView.swift */; };
 		1798D4F825053B4A0070FD60 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798D4F625053B4A0070FD60 /* MarkdownView.swift */; };
 		1798D4FA25053BAD0070FD60 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798D4F925053BAD0070FD60 /* WebView.swift */; };
@@ -56,8 +53,6 @@
 			dstPath = highlightjs;
 			dstSubfolderSpec = 7;
 			files = (
-				1748B865252212E900A6DA2F /* highlight.pack.js in CopyFiles */,
-				1713E3F725227DA300EB8E01 /* a11y-adapt.css in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +61,7 @@
 /* Begin PBXFileReference section */
 		1713E3F625227DA300EB8E01 /* a11y-adapt.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "a11y-adapt.css"; sourceTree = "<group>"; };
 		1717F0A1251D3FAD00F3DD8D /* swift-cmark-gfm */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "swift-cmark-gfm"; path = "../swift-cmark-gfm"; sourceTree = "<group>"; };
-		172EB10A262F3BAC00B47105 /* Markdown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Markdown.entitlements; sourceTree = "<group>"; };
+		172EB10A262F3BAC00B47105 /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
 		173D79B62503912100A15BFC /* MarkdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownApp.swift; sourceTree = "<group>"; };
 		173D79B72503912100A15BFC /* MarkdownDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownDocument.swift; sourceTree = "<group>"; };
 		173D79B82503912100A15BFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				1784471C255AFF220022FBBF /* README.md */,
-				172EB10A262F3BAC00B47105 /* Markdown.entitlements */,
 				173D79B52503912100A15BFC /* Shared */,
 				173D79C02503912400A15BFC /* iOS */,
 				173D79C72503912400A15BFC /* macOS */,
@@ -148,6 +142,7 @@
 			children = (
 				1798D4F925053BAD0070FD60 /* WebView.swift */,
 				173D79C12503912400A15BFC /* Info.plist */,
+				172EB10A262F3BAC00B47105 /* iOS.entitlements */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -280,10 +275,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1798D4F42504EFB60070FD60 /* index.html in Resources */,
+				177A6FF6265E4AA400D9F862 /* index.all-in-one.html in Resources */,
 				1798D4F12504EEBD0070FD60 /* test.md in Resources */,
 				173D79D02503912400A15BFC /* Assets.xcassets in Resources */,
-				1798D4EE2504E8D10070FD60 /* styles.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Markdown.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iOS/iOS.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8CC95REUG;
@@ -470,7 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Markdown.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iOS/iOS.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8CC95REUG;

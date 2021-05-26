@@ -12,6 +12,7 @@ struct WebView: UIViewRepresentable {
     typealias UIViewType = WKWebView
     let indexHtmlUrl: URL
     let injectHtml: String
+    let baseURL: URL?
 
     func makeUIView(context: Context) -> WKWebView {
         print("\(#function)")
